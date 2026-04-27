@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Awis & Ale</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero reveal">
+      <p class="hero-tag">para Awis, de Ale</p>
+      <h1>Nuestra pagina para organizar mejor nuestros planes</h1>
+      <p class="hero-text">
+        Hice este espacio para nosotros porque no quiero que se nos sigan cayendo planes por falta de organizacion.
+        Quiero que aqui podamos guardar ideas, poner fechas y tomar un poquito mejor nuestras salidas.
+      </p>
+      <div class="hero-notes">
+        <div class="mini-note">
+          <span>ideas</span>
+          <strong id="ideasCount">0</strong>
+        </div>
+        <div class="mini-note">
+          <span>planes</span>
+          <strong id="plansCount">0</strong>
+        </div>
+        <div class="mini-note">
+          <span>confirmados</span>
+          <strong id="confirmedCount">0</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="layout">
+      <article class="panel reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Primero</p>
+            <h2>Ideas que se me ocurren para nosotros</h2>
+          </div>
+        </div>
+
+        <form id="ideaForm" class="stack-form">
+          <label>
+            <span>Nombre de la idea</span>
+            <input id="ideaTitle" name="title" type="text" maxlength="70" placeholder="Ej. Ir por sushi y luego caminar" required>
+          </label>
+          <label>
+            <span>Lo que quiero anotar</span>
+            <textarea id="ideaNote" name="note" rows="3" maxlength="180" placeholder="Algo simple para no olvidarlo despues"></textarea>
+          </label>
+          <button class="primary-button" type="submit">Guardar idea</button>
+        </form>
+
+        <div id="ideasList" class="card-list"></div>
+      </article>
+
+      <article class="panel reveal">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Despues</p>
+            <h2>Planes que ya quiero dejar acomodados</h2>
+          </div>
+        </div>
+
+        <form id="planForm" class="stack-form">
+          <label>
+            <span>Nombre del plan</span>
+            <input id="planTitle" name="title" type="text" maxlength="70" placeholder="Ej. Salir el viernes por un cafe" required>
+          </label>
+
+          <div class="two-columns">
+            <label>
+              <span>Fecha</span>
+              <input id="planDate" name="date" type="date" required>
+            </label>
+            <label>
+              <span>Hora</span>
+              <input id="planTime" name="time" type="time" required>
+            </label>
+          </div>
+
+          <label>
+            <span>Estado del plan</span>
+            <div class="segmented-control" role="radiogroup" aria-label="Estado del plan">
+              <input id="statusProgress" type="radio" name="status" value="En progreso" checked>
+              <label for="statusProgress">En progreso</label>
+              <input id="statusConfirmed" type="radio" name="status" value="Confirmado">
+              <label for="statusConfirmed">Confirmado</label>
+            </div>
+          </label>
+
+          <label>
+            <span>Detalle opcional</span>
+            <textarea id="planNote" name="note" rows="3" maxlength="180" placeholder="Lo que quiero recordar de este plan"></textarea>
+          </label>
+
+          <button class="primary-button" type="submit">Registrar plan</button>
+        </form>
+
+        <div id="plansList" class="card-list"></div>
+      </article>
+    </section>
+  </main>
+
+  <template id="emptyState">
+    <div class="empty-state">
+      <p></p>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
