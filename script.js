@@ -107,7 +107,7 @@ function renderIdeas() {
   ideasList.innerHTML = "";
 
   if (!state.ideas.length) {
-    ideasList.appendChild(createEmptyState("Aqui quiero ir guardando ideas para nosotros y no olvidarlas."));
+    ideasList.appendChild(createEmptyState("Aqui vamos a ir guardando ideas para no olvidarlas."));
     return;
   }
 
@@ -135,7 +135,7 @@ function renderPlans() {
   plansList.innerHTML = "";
 
   if (!state.plans.length) {
-    plansList.appendChild(createEmptyState("Cuando ya tengamos algo mas claro, aqui quiero dejarlo bien anotado."));
+    plansList.appendChild(createEmptyState("Cuando ya tengamos algo claro, aqui lo dejamos bien anotado."));
     return;
   }
 
