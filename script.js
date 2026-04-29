@@ -23,23 +23,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
-const defaults = {
-  ideas: [
-    {
-      title: "Ir por algo rico y platicar sin prisa",
-      note: "Solo quiero guardar esto para que no se me vaya la idea.",
-    },
-  ],
-  plans: [
-    {
-      title: "Salir por un cafe y vernos tranquilos",
-      date: getUpcomingDate(4),
-      time: "18:30",
-      status: "En progreso",
-      note: "Quiero ir viendo desde ahorita si si podemos acomodarlo.",
-    },
-  ],
-};
 
 const state = {
   ideas: [],
